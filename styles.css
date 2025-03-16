@@ -1,0 +1,235 @@
+*{
+    font-family: oblique bold 120% cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: bisque;
+    color: #333
+}
+
+.header h1 {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color:black;
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    z-index: 1000; 
+    margin: 0; 
+}
+
+
+.header p {
+    margin-top: 80px; 
+    padding: 5px; 
+    color: black;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.header p + p {
+    margin-top: 0; 
+}
+
+.main-content {
+    max-width:1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+}
+
+.gallery {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    color:black;
+    margin-bottom: 20px;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow:5px 5px 5px rgba(0, 0, 0, 0.1)
+}
+.menu {
+    background-color: #333;
+    margin-top: 10px;
+    border-radius: 8p
+}
+
+.menu ul {
+    list-style: none; 
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu li {
+    flex: 1 1 calc(33.333% - 20px); 
+    box-sizing: border-box; 
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    background-color: beige;
+    color:brown;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+}
+
+.footer {
+    background-color: black; 
+    text-align: left;
+    padding: 20px; 
+    width: 100%; 
+    margin-top: 20px; 
+}
+
+.footer p {
+    margin: 0; 
+    color: white;
+    font-size: 1rem; 
+    background-color: black; 
+    padding: 10px; 
+}
+@media (max-width: 1000px) {
+    .contenedor {
+        display: grid;
+        gap: 5px;
+        grid-template-areas:
+            "a b c"
+            "d e e"
+            "f f f";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr;
+    }
+
+    .menu ul {
+        flex-direction: column; 
+    }
+
+    .menu li {
+        flex: 1 1 100%; 
+    }
+}
+
+@media (max-width: 500px) {
+    .contenedor {
+        display: grid;
+        gap: 5px;
+        grid-template-areas:
+            "a b"
+            "c d"
+            "e e"
+            "f f";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 2fr;
+    }
+
+    #header {
+        width: 95%; 
+    }
+
+    #header .menu {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 85% !important;
+        gap: 10px;
+    }
+
+    .menu-item {
+        width: 100%; 
+    }
+
+    .gallery img {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+}
+
+.reseñas-container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: bisque; 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.reseñas-container header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.reseñas-container main {
+    margin-top: 100px; 
+    padding: 20px;
+    flex: 1;
+}
+
+.reseñas-container section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /
+}
+
+.reseñas-container article {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reseñas-container article p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+.reseñas-container footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+.reseñas-container footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.reseñas-container footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
